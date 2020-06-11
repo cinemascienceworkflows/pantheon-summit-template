@@ -15,7 +15,7 @@ mkdir $PANTHEON_RUN_DIR
 # copy executable and support files to the result directory
 #     this step will vary, depending on the application requirements
 cp app.executable $PANTHEON_RUN_DIR/renamed.executable
-cp inputs/submit.sh $PANTHEON_RUN_DIR
+cp run/submit.sh $PANTHEON_RUN_DIR
 
 # go to run dir and update the submit script
 pushd $PANTHEON_RUN_DIR

@@ -1,0 +1,17 @@
+pantheon:
+    version: 1.0 
+    state: research
+
+project:
+    name: ProjectName
+
+workflow:
+    pantheonid: ProjectName_WorkflowName_001 
+    desc: Description 
+    workflow_app: app
+    workflow_in-situ: in-situ
+    workflow_post-processing: post
+           
+contact: 
+    name: David Rogers 
+    email: dhr@lanl.gov 

@@ -18,7 +18,7 @@ When the workflow is run, the following files will be run in this order:
 | file | what to do |
 |------|---------|
 |`bootstrap.env` | edit the `SUMMIT_ALLOCATION` variable value to reflect your allocation. |
-|`pantheon/pantheon.yml` | edit this to reflect the information from Pantheon for your workflow. If you do not have Pantheon settings information, you may leave this file unedited. |
+|`pantheon/pantheon.yaml` | edit this to reflect the information from Pantheon for your workflow. If you do not have Pantheon settings information, you may leave this file unedited. |
 |`postprocess/postprocess.sh` | Edit this to call your postprocessing scripts, if you have them. |
 |`readme.md` | edit the top line to indicate what type of Pantheon pipeline this is. |
 |`run/run.sh` | edit this to copy files as needed by the application. |

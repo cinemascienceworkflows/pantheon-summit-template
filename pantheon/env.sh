@@ -6,11 +6,11 @@
 source bootstrap.env
 
 # read values from pantheon file
-export PANTHEON_WORKFLOW_ID=`awk '/pantheonid/{print $NF}' pantheon/pantheon.yml`
+export PANTHEON_WORKFLOW_ID=`awk '/pantheonid/{print $NF}' pantheon/pantheon.yaml`
     # create the job id - a lower case version of the workflow id
 export PANTHEON_WORKFLOW_JID=`echo "$PANTHEON_WORKFLOW_ID" | awk '{print tolower($0)}'`
-export PANTHEON_APP=`awk '/workflow_app/{print $NF}' pantheon/pantheon.yml`
-export PANTHEON_VERSION=`awk '/version/{print $NF}' pantheon/pantheon.yml`
+export PANTHEON_APP=`awk '/workflow_app/{print $NF}' pantheon/pantheon.yaml`
+export PANTHEON_VERSION=`awk '/version/{print $NF}' pantheon/pantheon.yaml`
 
 # this instance's directories
 export PANTHEON_BASE_PATH=$MEMBERWORK/$SUMMIT_ALLOCATION

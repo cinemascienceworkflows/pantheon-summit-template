@@ -1,5 +1,6 @@
 pantheon:
     version: 1.0 
+    template_version: 1.0
     state: research
 
 project:

@@ -1,6 +1,6 @@
 ![research](https://pantheonscience.github.io/states/research.png)
 
-# Pantheon Workflow Template v 1.0
+# Pantheon Workflow Template v <noop name="version">1.0</noop>
 
 A repository template for the Pantheon project workflows on summit.
 

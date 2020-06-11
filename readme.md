@@ -15,10 +15,15 @@ When the workflow is run, the following files will be run in this order:
 1. `postprocessing/postprocessing.sh`
 
 ## Edit these files
-
-1. `bootstrap.env` - edit the `SUMMIT_ALLOCATION` variable value to reflect your allocation
-1. `pantheon/pantheon.yml` - edit this to reflect the information from Pantheon for your workflow 
-1. 
+| file | what to do |
+|------|---------|
+|`bootstrap.env` | edit the `SUMMIT_ALLOCATION` variable value to reflect your allocation. |
+|`pantheon/pantheon.yml` | edit this to reflect the information from Pantheon for your workflow. If you do not have Pantheon settings information, you may leave this file unedited. |
+|`postprocess/postprocess.sh` | Edit this to call your postprocessing scripts, if you have them. |
+|`run/run.sh` | edit this to copy files as needed by the application. |
+|`run/submit.sh` | edit this to properly submit your job. |
+|`setup/install-deps.sh` | edit to install dependencies |
+|`setup/install-app.sh` | edit to install application  |
 
 
 ## DO NOT edit these files

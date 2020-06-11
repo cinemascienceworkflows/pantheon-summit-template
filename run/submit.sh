@@ -2,17 +2,19 @@
 
 #BSUB -J <pantheon_workflow_jid> 
 #BSUB -P <summit_allocation> 
+
+# --------------------------------------------------------------------
+# BEGIN: EDIT THIS SECTION
+#     add the bsub settings, modules and execution for your application
 #BSUB -nnodes 8
 #BSUB -W 00:10
-#BSUB -o WarpXo.%J
-#BSUB -e WarpXe.%J
 
+# load modules required by the executable
 module load gcc
 module load cuda
 
-omp=1
-export OMP_NUM_THREADS=${omp}
-
-num_nodes=$(( $(printf '%s\n' ${LSB_HOSTS} | sort -u | wc -l) - 1 ))
-jsrun -n ${num_nodes} -a 6 -g 6 -c 6 --bind=packed:${omp} ./warpx.exe inputs_3d > output.txt
+# submit the job
+jsrun -n 8 executable-to-run 
+# END: EDIT THIS SECTION
+# --------------------------------------------------------------------
 

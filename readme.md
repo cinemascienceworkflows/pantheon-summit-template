@@ -6,6 +6,12 @@ A repository template for the Pantheon project workflows on summit.
 
 ## Using this repository
 
+To run the workflow:
+
+```
+./execute
+```
+
 When the workflow is run, the following files will be run in this order:
 
 1. `setup/install-deps.sh`

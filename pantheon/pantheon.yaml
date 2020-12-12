@@ -1,6 +1,6 @@
 pantheon:
-    version: 1.0 
-    template_version: 1.0
+    version: 1.1 
+    template_version: 1.1
     state: research
 
 project:
@@ -14,5 +14,5 @@ workflow:
     workflow_post-processing: post
            
 contact: 
-    name: David Rogers 
-    email: dhr@lanl.gov 
+    name: Your Name 
+    email: your.name@mailplace.com 

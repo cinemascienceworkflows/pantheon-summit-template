@@ -23,5 +23,4 @@ The main loop is in the `execute` script. From there, you can see the steps take
 
 ## DO NOT edit these files
 
-1. `main.workflow`
 1. `pantheon/pantheon.env`

@@ -1,4 +1,6 @@
-!#/usr/bin/bash
+#!/usr/bin/bash
+
+source pantheon/env.sh
 
 ./sbang.sh setup/install-deps.sh
 ./sbang.sh run/run.sh

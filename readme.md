@@ -2,28 +2,16 @@
 
 # Pantheon Workflow Template v <noop name="version">1.0</noop>
 
-A repository template for the Pantheon project workflows on summit.
+A repository template for the Pantheon project workflows.
 
 ## Using this repository
 
-To run the workflow:
-
-```
-./execute
-```
-
-When the workflow is run, the following files will be run in this order:
-
-1. `setup/install-deps.sh`
-    - `setup/install-app.sh` (called from the above script)
-1. `run/run.sh` (this submits the job)
-1. `run/wait_for_completion.sh`
-1. `postprocessing/postprocessing.sh`
+The main loop is in the `execute` script. From there, you can see the steps taken, and can follow the scripts to create your own examples.
 
 ## Edit these files
 | file | what to do |
 |------|---------|
-|`bootstrap.env` | edit the `SUMMIT_ALLOCATION` variable value to reflect your allocation. |
+|`bootstrap.env` | edit the `COMPUTE_ALLOCATION` and `PANTHEON_BASE_PATH` to match your environment |
 |`pantheon/pantheon.yaml` | edit this to reflect the information from Pantheon for your workflow. If you do not have Pantheon settings information, you may leave this file unedited. |
 |`postprocess/postprocess.sh` | edit this to call your postprocessing scripts, if you have them. |
 |`readme.md` | edit the top line to indicate what type of Pantheon pipeline this is. |
@@ -37,7 +25,3 @@ When the workflow is run, the following files will be run in this order:
 
 1. `main.workflow`
 1. `pantheon/pantheon.env`
-
-## Release
-
-LA-UR-20-26479

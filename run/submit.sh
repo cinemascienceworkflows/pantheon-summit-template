@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #BSUB -J <pantheon_workflow_jid> 
-#BSUB -P <summit_allocation> 
+#BSUB -P <compute_allocation> 
 
 # --------------------------------------------------------------------
 # BEGIN: EDIT THIS SECTION

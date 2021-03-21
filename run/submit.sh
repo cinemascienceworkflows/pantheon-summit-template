@@ -6,15 +6,15 @@
 # --------------------------------------------------------------------
 # BEGIN: EDIT THIS SECTION
 #     add the bsub settings, modules and execution for your application
-#BSUB -nnodes 8
-#BSUB -W 00:10
+#BSUB -P <compute_allocation>
+#BSUB -J <pantheon_workflow_jid> 
+#BSUB -W 0:03
+#BSUB -nnodes 1
 
 # load modules required by the executable
-module load gcc
-module load cuda
 
 # submit the job
-jsrun -n 8 executable-to-run 
+jsrun executable-to-run 
 # END: EDIT THIS SECTION
 # --------------------------------------------------------------------
 

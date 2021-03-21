@@ -1,6 +1,5 @@
 pantheon:
     version: 1.1 
-    template_version: 1.1
     state: research
 
 project:

@@ -1,27 +1,18 @@
 #!/bin/bash -l
 
-# adding comment
+START_TIME=$(date +"%r %Z")
+source ./pantheon/env.sh > /dev/null 2>&1
 
-source ./pantheon/env.sh
-
+echo "------------------------------------------------------------"
 echo "PTN: Establishing Pantheon workflow directory:"
 echo $PANTHEON_WORKFLOW_DIR
+echo "------------------------------------------------------------"
 
 PANTHEON_SOURCE_ROOT=$PWD
 
-# build serial or parallel
-    # serial
-# BUILD_FLAGS=""
-    # parallel
-BUILD_FLAGS="-j"
-
 # these settings allow you to control what gets built ... 
 BUILD_CLEAN=true
-BUILD_APP=true
-
-# other variables
-
-# install locations
+INSTALL_APP=true
 
 # commits
 
@@ -36,6 +27,7 @@ if $BUILD_CLEAN; then
     echo "------------------------------------------------------------"
     echo "PTN: clean build ..."
     echo "------------------------------------------------------------"
+
     if [ -d $PANTHEON_WORKFLOW_DIR ]; then
         rm -rf $PANTHEON_WORKFLOW_DIR
     fi
@@ -44,15 +36,23 @@ if $BUILD_CLEAN; then
     fi
     mkdir $PANTHEON_WORKFLOW_DIR
     mkdir $PANTHEON_DATA_DIR
+    mkdir $PANTHEON_RUN_DIR
 fi
+
 
 # build the application and parts as needed
-if $BUILD_APP; then
-    pushd $PANTHEON_WORKFLOW_DIR
-    pwd
+if $INSTALL_APP; then
+    echo "------------------------------------------------------------"
+    echo "PTN: installing app ..."
+    echo "------------------------------------------------------------"
 
     source $PANTHEON_SOURCE_ROOT/setup/install-app.sh
-
-    popd
 fi
+
+END_TIME=$(date +"%r %Z")
+echo "------------------------------------------------------------"
+echo "PTN: install-deps" 
+echo "PTN: start: $START_TIME"
+echo "PTN: end  : $END_TIME"
+echo "------------------------------------------------------------"
 

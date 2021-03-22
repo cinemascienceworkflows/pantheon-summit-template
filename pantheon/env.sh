@@ -4,7 +4,6 @@
 
 source bootstrap.env
 
-
 # read values from pantheon file
 export PANTHEON_WORKFLOW_ID=`awk '/pantheonid/{print $NF}' pantheon/pantheon.yaml`
     # create the job id - a lower case version of the workflow id

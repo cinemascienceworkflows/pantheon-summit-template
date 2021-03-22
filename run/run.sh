@@ -3,28 +3,22 @@
 source ./pantheon/env.sh
 
 # update the submit script
-if [ -d $PANTHEON_RUN_DIR ]; then
-    echo "------------------------------------------------------------"
-    echo "PTN: $PANTHEON_RUN_DIR exists ... exiting"
-    echo "------------------------------------------------------------"
-    exit
+if [ ! -d $PANTHEON_RUN_DIR ]; then
+    mkdir $PANTHEON_RUN_DIR
 fi
-
-mkdir $PANTHEON_RUN_DIR
 
 # --------------------------------------------------------------------
 # BEGIN: EDIT THIS SECTION
 # copy executable and support files to the result directory
 #     this step will vary, depending on the application requirements
 
-cp app.executable $PANTHEON_RUN_DIR/renamed.executable
 cp run/submit.sh $PANTHEON_RUN_DIR
 
 # END: EDIT THIS SECTION
 # --------------------------------------------------------------------
 
 # go to run dir and update the submit script
-pushd $PANTHEON_RUN_DIR
+pushd $PANTHEON_RUN_DIR > /dev/null 2>&1
 sed -i "s/<pantheon_workflow_jid>/${PANTHEON_WORKFLOW_JID}/" submit.sh
 sed -i "s#<pantheon_workflow_dir>#${PANTHEON_WORKFLOW_DIR}#" submit.sh
 sed -i "s#<pantheon_run_dir>#${PANTHEON_RUN_DIR}#" submit.sh

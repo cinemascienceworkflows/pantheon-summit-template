@@ -12,7 +12,7 @@
 # load modules required by the executable
 
 # submit the job
-jsrun executable-to-run 
+jsrun -n1 <pantheon_run_dir>/executable-to-run
 # END: EDIT THIS SECTION
 # --------------------------------------------------------------------
 

@@ -19,6 +19,11 @@ fi
 #     this step will vary, depending on the application requirements
 
 cp run/submit.sh $PANTHEON_RUN_DIR
+
+# create an example database
+# remove this when this template is used
+cp inputs/cinema/create_example_cdb $PANTHEON_RUN_DIR
+
 # copy new actions file
 cp inputs/ascent/ascent_actions.yaml $PANTHEON_RUN_DIR
 

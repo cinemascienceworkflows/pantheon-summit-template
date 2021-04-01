@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+# create a sample cinema database in the current directory
+mkdir cinema_databases
+pushd cinema_databases > /dev/null 2>&1
+mkidr $PANTHEON_CDB
+pushd $PANTHEON_CDB > /dev/null 2>&1
+
+touch data.csv
+touch 000.png
+touch 001.png
+touch 002.png
+
+popd > /dev/null 2>&1
+popd > /dev/null 2>&1
+popd > /dev/null 2>&1

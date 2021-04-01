@@ -12,7 +12,7 @@
 # load modules required by the executable
 
 # submit the job
-jsrun -n1 <pantheon_run_dir>/create_cinema_database
+jsrun -n1 <pantheon_run_dir>/create_example_cdb
 # END: EDIT THIS SECTION
 # --------------------------------------------------------------------
 

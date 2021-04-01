@@ -6,12 +6,12 @@ echo "----------------------------------------------------------------------"
 echo "PTN: validating" 
 
 OUTPUT=$PANTHEON_RUN_DIR/cinema_databases/$PANTHEON_CDB
-GOLD=validate/data/cloverleaf3d_001.cdb
+GOLD=validate/data/pantheon.cdb
 
 echo "     $OUTPUT"
 
-dirs="0.0 2.0 5.0"
-img="0.0_0.0_pantheon.cdb.png"
+dirs="0 1 2"
+img="000.png"
 
 PASS=true
 if [ -d $OUTPUT ]; then

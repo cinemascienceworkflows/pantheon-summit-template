@@ -1,17 +1,19 @@
 pantheon:
-    version: 1.1 
-    state: research
+    pantheon_version: 1.2
+    pantheon_state: research
 
 project:
-    name: ProjectName
+    project_name: E4S
+    project_website: 
 
 workflow:
-    pantheonid: ProjectName_WorkflowName_001 
-    desc: Description 
-    workflow_app: app
+    workflow_name: Template 
+    workflow_desc: E4S Template 
+    workflow_cinema-db: pantheon.cdb
+    workflow_app: appname
     workflow_in-situ: in-situ
     workflow_post-processing: post
-           
-contact: 
-    name: Your Name 
-    email: your.name@mailplace.com 
+
+contact:
+    contact_name: David Rogers
+    contact_email: dhr@lanl.gov

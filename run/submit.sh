@@ -2,14 +2,12 @@
 
 #BSUB -J <pantheon_workflow_jid> 
 #BSUB -P <compute_allocation> 
+#BSUB -W 0:03
+#BSUB -nnodes 1
 
 # --------------------------------------------------------------------
 # BEGIN: EDIT THIS SECTION
 #     add the bsub settings, modules and execution for your application
-#BSUB -P <compute_allocation>
-#BSUB -J <pantheon_workflow_jid> 
-#BSUB -W 0:03
-#BSUB -nnodes 1
 
 # load modules required by the executable
 
